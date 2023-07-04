@@ -1,17 +1,19 @@
-import { useState } from 'react';
+'use client';
+
+import { React, useState } from 'react';
 import { useAuth } from '@arcana/auth-react';
 import Loader from '../components/loader';
 import { Info } from '../components/info';
 import styles from './index.module.css';
 
+const names = [
+  '1. Web2-like user onboarding',
+  '2. Sign blockchain transactions',
+  '3. Web3 wallet operations'
+];
 
 function Header({ title }) {
   const [likes, setLikes] = useState(0);
-  const names = [
-    '1. Web2-like user onboarding',
-    '2. Sign blockchain transactions',
-    '3. Web3 wallet operations'
-  ];
 
   function handleClick() {
     setLikes(likes + 1);
@@ -56,6 +58,7 @@ export default function IndexPage() {
   if (loading) {
     return (
       <>
+        <Header title="Arcana Auth NextJS Sample App. 🚀" />
         <Loader secondaryColor="#101010" strokeColor="#101010" />
       </>
     );
@@ -64,6 +67,7 @@ export default function IndexPage() {
   if (!isLoggedIn) {
     return (
       <>
+        <Header title="Arcana Auth NextJS Sample App. 🚀" />
         <button className={styles.Btn} onClick={onConnectClick}>
           Connect
         </button>
@@ -71,5 +75,5 @@ export default function IndexPage() {
     );
   }
 
-  return( <Info info={user} /> );
+  return <Info info={user} />;
 }

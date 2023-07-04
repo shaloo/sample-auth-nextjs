@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const auth = getAuth();
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return (
     <ProvideAuth provider={auth}>
       <Layout className={inter.className}>
@@ -17,5 +17,3 @@ function MyApp({ Component, pageProps }) {
     </ProvideAuth>
   );
 }
-
-export default MyApp;
