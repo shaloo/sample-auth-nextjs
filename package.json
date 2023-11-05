@@ -12,8 +12,8 @@
     "next": "13.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "@arcana/auth": "1.0.8",
-    "@arcana/auth-react": "0.0.3"
+    "@arcana/auth": "1.0.9-beta.1",
+    "@arcana/auth-react": "0.0.4-beta.1"
   },
   "license": "MIT",
   "keywords": [],

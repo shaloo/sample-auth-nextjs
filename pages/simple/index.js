@@ -1,7 +1,7 @@
 'use client';
 
 import { React, useState } from 'react';
-import { useAuth } from '@arcana/auth-react';
+//import { useAuth } from '@arcana/auth-react';
 import Loader from '../components/loader';
 import { Info } from '../components/info';
 import styles from './index.module.css';
@@ -33,17 +33,6 @@ function Header({ title }) {
 }
 
 export default function IndexPage() {
-  const { user, connect, isLoggedIn, loading, loginWithSocial, provider } =
-    useAuth();
-
-  const onConnectClick = async () => {
-    try {
-      await loginWithSocial('google');
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   const onConnect = () => {
     console.log('connected');
 
@@ -55,25 +44,9 @@ export default function IndexPage() {
     }, [provider]);
   };
 
-  if (loading) {
-    return (
-      <>
-        <Header title="Arcana Auth NextJS Sample App. 🚀" />
-        <Loader secondaryColor="#101010" strokeColor="#101010" />
-      </>
-    );
-  }
-
-  if (!isLoggedIn) {
-    return (
-      <>
-        <Header title="Arcana Auth NextJS Sample App. 🚀" />
-        <button className={styles.Btn} onClick={onConnectClick}>
-          Connect with Google
-        </button>
-      </>
-    );
-  }
-
-  return <Info info={user} />;
+  return (
+  <>
+  <Header title="Arcana Auth NextJS Sample App using auth-react Auth." />
+  </>
+  );
 }

@@ -38,7 +38,7 @@ export default function IndexPage() {
 
   const onConnectClick = async () => {
     try {
-      await loginWithSocial('google');
+      await connect();
     } catch (e) {
       console.log(e);
     }
@@ -69,7 +69,7 @@ export default function IndexPage() {
       <>
         <Header title="Arcana Auth NextJS Sample App. 🚀" />
         <button className={styles.Btn} onClick={onConnectClick}>
-          Connect with Google
+          Connect
         </button>
       </>
     );
