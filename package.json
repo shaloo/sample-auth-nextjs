@@ -1,6 +1,6 @@
 {
   "name": "nextjs-13-js-starter-template",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -12,7 +12,7 @@
     "next": "13.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "@arcana/auth": "1.0.9-beta.1",
+    "@arcana/auth": "1.0.9",
     "@arcana/auth-react": "0.0.4-beta.1"
   },
   "license": "MIT",
